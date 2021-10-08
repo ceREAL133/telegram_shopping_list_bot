@@ -42,16 +42,8 @@ bot.action('list', ctx => {
 })
 
 
-
-bot.action('enough',()=>{ console.log(productsList)})
-
-// bot.start((ctx) => ctx.reply('Welcome'))
-// bot.help((ctx) => ctx.reply('Send me a sticker'))
-// bot.on('sticker', (ctx) => ctx.reply('👍'))
-// bot.hears('hi', (ctx) => ctx.reply('Hey there'))
-// process.once('SIGINT', () => bot.stop('SIGINT'))
-// bot.launch()
-
-
+bot.action('enough', (ctx)=>{
+    ctx.reply(productsList.join(', \n'))
+})
 
 bot.launch();
